@@ -36,7 +36,7 @@ spec:
       # This must be overridden, since we can't accept this for the user.
       eula: "TRUE"
       # This can be one of "VANILLA", "FORGE", "SPIGOT", "BUKKIT", "PAPER", "FTB", "SPONGEVANILLA", "CUSTOM"
-      type: "SPONGEVANILLA"
+      type: "VANILLA"
       version: 1.16.1
       # A comma-separated list of player names who should be admins.
       ops: mungrat
