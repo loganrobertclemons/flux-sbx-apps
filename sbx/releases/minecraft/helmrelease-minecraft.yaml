@@ -36,12 +36,12 @@ spec:
       # This must be overridden, since we can't accept this for the user.
       eula: "TRUE"
       # This can be one of "VANILLA", "FORGE", "SPIGOT", "BUKKIT", "PAPER", "FTB", "SPONGEVANILLA", "CUSTOM"
-      type: "VANILLA"
+      type: "SPONGEVANILLA"
       version: 1.16.1
       # A comma-separated list of player names who should be admins.
       ops: mungrat
       # One of: creative, survival, adventure, spectator
-      gameMode: creative
+      gameMode: survival
       # Message of the Day
       motd: "Welcome to Logan's automated minecraft server deployment!"
       # Check accounts against Minecraft account service.
