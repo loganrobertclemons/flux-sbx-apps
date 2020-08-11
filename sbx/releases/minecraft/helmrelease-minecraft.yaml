@@ -12,7 +12,7 @@ spec:
   values:
     # ref: https://hub.docker.com/r/itzg/minecraft-server/
     # ref: https://github.com/helm/charts/blob/master/stable/minecraft/values.yaml
-    image: https://hub.docker.com/r/itzg/minecraft-server
+    image: itzg/minecraft-server
     imageTag: latest
 
     #podAnnotations:
