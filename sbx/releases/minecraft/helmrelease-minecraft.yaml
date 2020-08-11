@@ -42,6 +42,10 @@ spec:
       ops: mungrat
       # One of: creative, survival, adventure, spectator
       gameMode: survival
+      # One of: peaceful, easy, normal, and hard
+      difficulty: medium
+      # If true, enable player-vs-player damage.
+      pvp: true
       # Message of the Day
       motd: "Welcome to Logan's automated minecraft server deployment!"
       # Check accounts against Minecraft account service.
