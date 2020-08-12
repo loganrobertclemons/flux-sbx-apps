@@ -8,4 +8,9 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: prometheus-operator
-    version: latest
+    version: 8.5.8
+  values:
+    prometheusSpec:
+        image:
+            repository: prom/prometheus
+            tag: v2.6.1
