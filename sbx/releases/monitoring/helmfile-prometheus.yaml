@@ -1,0 +1,11 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: prometheus-operator
+  namespace: monitoring
+spec:
+  releaseName: prometheus-operator
+  chart:
+    repository: https://itzg.github.io/minecraft-server-charts/
+    name: https://kubernetes-charts.storage.googleapis.com
+    version: 2.0.4
