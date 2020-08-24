@@ -9,4 +9,8 @@ spec:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: prometheus-operator
     version: 8.5.8
+      values:
+        grafana:
+          ingress:
+            enabled: true
             
