@@ -27,18 +27,6 @@ spec:
     prometheus:
       service:
         type: LoadBalancer
-      ingress:
-        enabled: false
-        hosts: test.com
-        paths:
-          - /
-
-      prometheusSpec:
-        additionalScrapeConfigs:
-        replicas: 1
-        externalLabels:
-          cluster: minecraft
-       
       server:
         global:
           scrape_timeout: 30s
