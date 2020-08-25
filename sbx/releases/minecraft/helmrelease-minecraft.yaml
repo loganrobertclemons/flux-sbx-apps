@@ -12,8 +12,14 @@ spec:
   values:
     # ref: https://hub.docker.com/r/itzg/minecraft-server/
     # ref: https://github.com/helm/charts/blob/master/stable/minecraft/values.yaml
-    image: dockerhub.artifactory.davita.com/itzg/minecraft-server
+    image: itzg/minecraft-server
     imageTag: latest
+
+    #podAnnotations:
+    #  pre.hook.backup.velero.io/command: '["bash", "-c", "rcon-cli save-off; rcon-cli save-all"]'
+    #  post.hook.backup.velero.io/command: '["rcon-cli", "save-on"]'
+    #  backup.velero.io/backup-volumes: datadir
+
 
     ## Configure resource requests and limits
     ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
@@ -35,9 +41,13 @@ spec:
       # A comma-separated list of player names who should be admins.
       ops: mungrat
       # One of: creative, survival, adventure, spectator
-      gameMode: creative
+      gameMode: survival
+      # One of: peaceful, easy, normal, and hard
+      difficulty: normal
+      # If true, enable player-vs-player damage.
+      pvp: true
       # Message of the Day
-      motd: "Welcome to the DevOps Minecraft Demo on Kubernetes!"
+      motd: "Welcome to Logan's automated minecraft server deployment!"
       # Check accounts against Minecraft account service.
       onlineMode: true
       # If you adjust this, you may need to adjust resources.requests above to match.
@@ -55,7 +65,7 @@ spec:
     ## Additional minecraft container environment variables
     ##
     # extraEnv:
-    #   CUSTOM_SERVER: https://artifactory.davita.com/artifactory/SDLCApps/mc/server.jar
+    #   CUSTOM_SERVER:
 
     persistence:
       ## minecraft data Persistent Volume Storage Class
@@ -68,5 +78,5 @@ spec:
       # storageClass: "-"
       dataDir:
         # Set this to false if you don't care to persist state between restarts.
-        enabled: true
+        enabled: false
         Size: 1Gi
