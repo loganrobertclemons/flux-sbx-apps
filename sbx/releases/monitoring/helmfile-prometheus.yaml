@@ -18,4 +18,18 @@ spec:
         type: NodePort
         nodePort: 30090
       prometheusSpec:
-        containers: []
+        containers:
+        - name: stackdriver-sidecar
+          image: gcr.io/stackdriver-prometheus/stackdriver-prometheus-sidecar:0.8.0
+          imagePullPolicy: Always
+          args:
+            - --stackdriver.project-id=gke-dev-138
+            - --prometheus.wal-directory=/prometheus/wal
+            - --stackdriver.kubernetes.location=us-central1
+            - --stackdriver.kubernetes.cluster-name=cluster-1
+          ports:
+            - name: stackdriver
+              containerPort: 9091
+          volumeMounts:
+            - name: prometheus-prometheus-operator-prometheus-db
+              mountPath: /prometheus
