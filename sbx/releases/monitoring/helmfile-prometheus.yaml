@@ -10,14 +10,13 @@ spec:
     name: prometheus-operator
     version: 8.5.8
   values:
-    alertmanager:
-      enabled: false
     grafana:
       service:
         type: LoadBalancer
     prometheus:
-      ingress:
-        enabled: false
+      service:
+        type: NodePort
+        nodePort: 30090
       prometheusSpec:
         containers:
         - name: stackdriver-sidecar
@@ -32,4 +31,3 @@ spec:
           volumeMounts:
             - name: prometheus-prometheus-operator-prometheus-db
               mountPath: /prometheus
-
