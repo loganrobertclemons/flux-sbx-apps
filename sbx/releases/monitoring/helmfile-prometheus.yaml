@@ -18,7 +18,7 @@ spec:
     prometheus:
       service:
         type: NodePort
-        nodePort: 30090
+        nodePort: 30000
       prometheusSpec:
         containers:
         - name: stackdriver-sidecar
