@@ -16,6 +16,8 @@ spec:
       service:
         type: LoadBalancer
     prometheus:
+      ingress:
+        enabled: false
       prometheusSpec:
         containers:
         - name: stackdriver-sidecar
