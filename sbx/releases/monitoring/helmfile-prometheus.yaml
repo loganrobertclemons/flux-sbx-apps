@@ -10,6 +10,8 @@ spec:
     name: prometheus-operator
     version: 8.5.8
   values:
+    alertmanager:
+      enabled: false
     grafana:
       service:
         type: LoadBalancer
