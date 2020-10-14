@@ -17,6 +17,8 @@ spec:
         type: LoadBalancer
     prometheus:
       prometheusSpec:
+        service:
+          type: LoadBalancer
         containers:
         - name: stackdriver-sidecar
           image: gcr.io/stackdriver-prometheus/stackdriver-prometheus-sidecar:0.8.0
