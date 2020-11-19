@@ -8,4 +8,8 @@ spec:
   chart:
     repository: https://prometheus-community.github.io/helm-charts
     name: kube-prometheus-stack
-    version: 9.4.10
+  version: 9.4.10
+    values:
+      grafana:
+        service:
+          type: LoadBalancer
