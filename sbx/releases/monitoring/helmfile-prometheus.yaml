@@ -6,9 +6,9 @@ metadata:
 spec:
   releaseName: prometheus-operator
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com
-    name: prometheus-operator
-    version: 8.5.8
+    repository: https://prometheus-community.github.io/helm-charts
+    name: kube-prometheus-stack
+    version: 9.4.10
   values:
     alertmanager:
       enabled: false
