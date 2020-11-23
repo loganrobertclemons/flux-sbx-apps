@@ -9,22 +9,22 @@ spec:
     repository: https://prometheus-community.github.io/helm-charts
     name: kube-prometheus-stack
     version: 9.4.10
-  values:
-    serviceAccounts:
-      alertmanager:
-        create: false
-    alertmanager:
-      enabled: false
-    configmapReload:
-      alertmanager:
-        enabled: false
-    kubeStateMetrics:
-      enable: false
-    nodeExporter:
-      enabled: false
-    server:
-      enableServiceLinks: false
-    pushgateway:
-      enabled: false
+#  values:
+#    serviceAccounts:
+#      alertmanager:
+#        create: false
+#    alertmanager:
+#      enabled: false
+#    configmapReload:
+#      alertmanager:
+#        enabled: false
+#    kubeStateMetrics:
+#      enable: false
+#    nodeExporter:
+#      enabled: false
+#    server:
+#      enableServiceLinks: false
+#    pushgateway:
+#      enabled: false
 
 
