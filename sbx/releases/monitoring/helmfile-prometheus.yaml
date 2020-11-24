@@ -15,6 +15,8 @@ spec:
         create: false
     alertmanager:
       enabled: false
+    grafana:
+      enabled: false
     configmapReload:
       alertmanager:
         enabled: false
